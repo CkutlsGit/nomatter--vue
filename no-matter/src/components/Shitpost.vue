@@ -2,7 +2,7 @@
   <header-element></header-element>
   <section class="write">
     <div class="write__content">
-      <button @click="isOpen = true">Написать</button>
+      <button @click="openModal">Написать</button>
       <modal
           v-if="isOpen"
           @close="isOpen = false"
@@ -25,6 +25,11 @@ export default {
       isOpen: false
     }
   },
+  methods: {
+    openModal() {
+      this.isOpen = true
+    }
+  }
 }
 
 </script>
