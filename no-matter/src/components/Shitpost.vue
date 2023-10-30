@@ -6,14 +6,16 @@
       <modal
           v-if="isOpen"
           @close="isOpen = false"
-          @send="acceptSendValuefromModal"
+          @send="acceptSendArrayfromModal"
       >
       </modal>
     </div>
   </section>
   <section class="content">
     <div class="content__container">
+      <h1>{{ nickname }}</h1>
       <h1>{{ title }}</h1>
+      <h1>{{ description }}</h1>
     </div>
   </section>
 </template>
@@ -29,15 +31,19 @@ export default {
   data() {
     return {
       isOpen: false,
+      nickname: '',
       title: '',
+      description: ''
     }
   },
   methods: {
     openModal() {
       this.isOpen = true
     },
-    acceptSendValuefromModal(value) {
-      this.title = value
+    acceptSendArrayfromModal(Array) {
+      this.nickname = Array[0]
+      this.description = Array[1]
+      this.title = Array[2]
       this.isOpen = false
     }
   }
