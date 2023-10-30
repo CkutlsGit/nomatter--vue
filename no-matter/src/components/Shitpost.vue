@@ -1,30 +1,32 @@
 <template>
-  <header-element></header-element>
-  <section class="write">
-    <div class="write__content">
-      <button @click="openModal">Написать</button>
-      <modal
-          v-if="isOpen"
-          @close="isOpen = false"
-          @send="acceptSendArrayfromModal"
-      >
-      </modal>
-    </div>
-  </section>
-  <section class="content">
-    <div class="content__container">
-      <ul>
-        <li
-            v-for="(post, index) in posts"
-            :key="index"
+  <div class="shitpost">
+    <header-element></header-element>
+    <section class="write">
+      <div class="write__content">
+        <button @click="openModal">Написать</button>
+        <modal
+            v-if="isOpen"
+            @close="isOpen = false"
+            @send="acceptSendArrayfromModal"
         >
-          <h1>От {{ post.nickname }}</h1>
-          <h1>Заголовок: {{ post.title }}</h1>
-          <h1>Его слова: {{ post.description }}</h1>
-        </li>
-      </ul>
-    </div>
-  </section>
+        </modal>
+      </div>
+    </section>
+    <section class="content">
+      <div class="content__container">
+        <ul>
+          <li
+              v-for="(post, index) in posts"
+              :key="index"
+          >
+            <h1>От {{ post.nickname }}</h1>
+            <h1>Заголовок: {{ post.title }}</h1>
+            <h1>Его слова: {{ post.description }}</h1>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </div>
 </template>
 
 <script>
