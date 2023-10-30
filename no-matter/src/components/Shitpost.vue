@@ -31,9 +31,11 @@ export default {
   data() {
     return {
       isOpen: false,
-      nickname: '',
-      title: '',
-      description: ''
+      id: 0,
+      posts: [],
+      // nickname: '',
+      // title: '',
+      // description: ''
     }
   },
   methods: {
@@ -41,9 +43,13 @@ export default {
       this.isOpen = true
     },
     acceptSendArrayfromModal(Array) {
-      this.nickname = Array[0]
-      this.description = Array[1]
-      this.title = Array[2]
+      const post = {
+        id: this.id + 1,
+        nickname: Array[0],
+        description: Array[1],
+        title: Array[2]
+      }
+      this.posts.push(post)
       this.isOpen = false
     }
   }
