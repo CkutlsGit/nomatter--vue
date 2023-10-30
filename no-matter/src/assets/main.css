@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header */
+
+.header {
+    background: #000;
+}
+
+/* /Header */
+
+/* ShitPost page */
+
+.shitpost {
+    width: 100%;
+    height: 100vh;
+    background: #ff0404;
+}
+
+/* /ShitPost Page */
