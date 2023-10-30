@@ -13,9 +13,16 @@
   </section>
   <section class="content">
     <div class="content__container">
-      <h1>{{ nickname }}</h1>
-      <h1>{{ title }}</h1>
-      <h1>{{ description }}</h1>
+      <ul>
+        <li
+            v-for="(post, index) in posts"
+            :key="index"
+        >
+          <h1>От {{ post.nickname }}</h1>
+          <h1>Заголовок: {{ post.title }}</h1>
+          <h1>Его слова: {{ post.description }}</h1>
+        </li>
+      </ul>
     </div>
   </section>
 </template>
