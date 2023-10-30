@@ -6,8 +6,14 @@
       <modal
           v-if="isOpen"
           @close="isOpen = false"
+          @send="acceptSendValuefromModal"
       >
       </modal>
+    </div>
+  </section>
+  <section class="content">
+    <div class="content__container">
+      <h1>{{ title }}</h1>
     </div>
   </section>
 </template>
@@ -22,12 +28,17 @@ export default {
 
   data() {
     return {
-      isOpen: false
+      isOpen: false,
+      title: '',
     }
   },
   methods: {
     openModal() {
       this.isOpen = true
+    },
+    acceptSendValuefromModal(value) {
+      this.title = value
+      this.isOpen = false
     }
   }
 }
