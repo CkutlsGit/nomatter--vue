@@ -6,7 +6,7 @@
         <h2>Хочешь поделиться со своим никому не нужным мнением?</h2>
         <h2>Тебе сюда! Переходи на страницу shit post`ов</h2>
         <div class="start__work__btn">
-          <a href="#">Написать?</a>
+          <a href='#' @click="$router.push({ name: 'Post' })">Написать?</a>
         </div>
       </div>
     </section>
