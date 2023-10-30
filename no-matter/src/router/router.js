@@ -7,7 +7,7 @@ import Shitpost from "@/components/Shitpost.vue";
 export default createRouter({
     history: createWebHistory(),
     routes: [
-        { path: '/', component: mainPage, name: Main },
-        { path: '/shtpst', component:  Shitpost, name: Post}
+        { path: '/', component: mainPage, name: 'Main' },
+        { path: '/shtpst', component:  Shitpost, name: 'Post'}
     ]
 })
