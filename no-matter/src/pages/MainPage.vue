@@ -1,13 +1,25 @@
 <template>
-    <header class="header">
-        <div class="header__content">
-            <div class="header__logo">
-                <h1>No Matter</h1>
-            </div>
-            <h1>You Shit Posts</h1>
+  <div class="mainpage">
+    <header-element></header-element>
+    <section class="start-work">
+      <div class="start-work__content">
+        <h2>Хочешь поделиться со своим никому не нужным мнением?</h2>
+        <h2>Тебе сюда! Переходи на страницу shit post`ов</h2>
+        <div class="start__work__btn">
+          <a href="#">Написать?</a>
         </div>
-    </header>
+      </div>
+    </section>
+  </div>
 </template>
+
+<script>
+import headerElement from "@/pages/headerElement.vue";
+export default {
+  name: 'MainPage',
+  components: { headerElement }
+}
+</script>
 
 <style>
 
