@@ -1,9 +1,7 @@
 <template>
   <div class="dialog">
-    <dialog>
-      <h1>HELLO</h1>
-      <button @click="closeModal">Close</button>
-    </dialog>
+    <h1>HELLO</h1>
+    <button @click="closeModal">Close</button>
   </div>
 </template>
 
