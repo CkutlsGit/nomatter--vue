@@ -5,17 +5,17 @@
       <button class="modal__btn--close" @click="closeModal">❌</button>
       <div class="dialog__inputs">
         <div class="dialog__block--input">
-          <input type="text" v-model.trim="nickname" placeholder="Nickname">
+          <input type="text" v-model.trim="nickname" @input="checkForm" placeholder="Nickname">
         </div>
         <div class="dialog__block--input">
-          <input type="text" v-model.trim="title" placeholder="Title for post">
+          <input type="text" v-model.trim="title" @input="checkForm" placeholder="Title for post">
         </div>
         <div class="dialog__block--input">
-          <input type="text" v-model.trim="description" placeholder="What are you want say?">
+          <input type="text" v-model.trim="description" @input="checkForm" placeholder="What are you want say?">
         </div>
       </div>
       <div class="dialog__btns">
-        <button @click="sendValue" :disabled="checkAgreeforClick">Send</button>
+        <button @click="sendValue" :disabled="!canClick">Send</button>
       </div>
     </div>
   </div>
@@ -28,7 +28,7 @@ export default {
       nickname: '',
       title: '',
       description: '',
-      canClick: false
+      canClick: false,
     }
   },
   methods: {
@@ -38,10 +38,8 @@ export default {
     sendValue() {
       this.$emit('send', [this.nickname, this.title, this.description])
     },
-    checkAgreeforClick() {
-      if (this.nickname !== '' && this.title !== '' && this.description !== '') {
-        return this.canClick = true
-      }
+    checkForm() {
+      this.canClick = !(this.nickname.trim() === '' || this.title.trim() === '' || this.description.trim() === '');
     }
   }
 }
