@@ -4,7 +4,7 @@
       <div class="header__logo">
         <h1>No Matter</h1>
       </div>
-      <h1>You Shit Posts</h1>
+      <h1 class="header__underlogo">You Shit Posts</h1>
     </div>
   </header>
 </template>
@@ -28,13 +28,13 @@ export default {
   font-size: 39px;
   font-weight: 700;
 }
-.header__content h1 {
+.header__underlogo {
   font-size: 37px;
   text-decoration: underline;
   cursor: pointer;
   transition: 1s ease-in;
 }
-.header__content h1:hover {
+.header__underlogo:hover {
   text-decoration: none;
   color: #a2a2a2;
 }
