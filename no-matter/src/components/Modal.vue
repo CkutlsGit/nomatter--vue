@@ -45,7 +45,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .dialog {
   position: absolute;
   top: 30%;
