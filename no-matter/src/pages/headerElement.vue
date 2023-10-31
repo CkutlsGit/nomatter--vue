@@ -14,3 +14,28 @@ export default {
   name: 'headerElement'
 }
 </script>
+
+<style scoped>
+.header {
+  padding: 20px 40px;
+  color: #ffffff;
+}
+.header__content {
+  display: flex;
+  justify-content: space-between;
+}
+.header__content .header__logo h1 {
+  font-size: 39px;
+  font-weight: 700;
+}
+.header__content h1 {
+  font-size: 37px;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: 1s ease-in;
+}
+.header__content h1:hover {
+  text-decoration: none;
+  color: #a2a2a2;
+}
+</style>
