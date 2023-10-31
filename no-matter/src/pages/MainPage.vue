@@ -3,7 +3,7 @@
     <header-element></header-element>
     <section class="start-work">
       <div class="start-work__content">
-        <button class="close__btn" @click="closeModal">❌</button>
+        <button class="close__btn" @click="reloadPage">❌</button>
         <h2>Хочешь поделиться со своим никому не нужным мнением?</h2>
         <h2>Тебе сюда! Переходи на страницу shit post`ов</h2>
         <div class="start__work__btn">
@@ -18,7 +18,12 @@
 import headerElement from "@/pages/headerElement.vue";
 export default {
   name: 'MainPage',
-  components: { headerElement }
+  components: { headerElement },
+  methods: {
+    reloadPage() {
+      location.reload()
+    }
+  }
 }
 </script>
 
