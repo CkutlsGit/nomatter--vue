@@ -65,3 +65,21 @@ export default {
 }
 
 </script>
+
+<style scoped>
+.write__content button {
+  margin: 40px 40px;
+  padding: 5px 15px;
+  border: none;
+  font-size: 24px;
+  background: #807752;
+  color: #fff;
+  font-weight: 600;
+  opacity: .8;
+  cursor: pointer;
+  transition: .2s ease;
+}
+.write__content button:hover {
+  opacity: 1;
+}
+</style>
