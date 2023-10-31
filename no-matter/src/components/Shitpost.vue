@@ -55,8 +55,8 @@ export default {
       const post = {
         id: this.id + 1,
         nickname: Array[0],
-        description: Array[1],
-        title: Array[2]
+        title: Array[1],
+        description: Array[2],
       }
       this.posts.push(post)
       this.isOpen = false
