@@ -3,6 +3,7 @@
     <header-element></header-element>
     <section class="start-work">
       <div class="start-work__content">
+        <button class="close__btn" @click="closeModal">❌</button>
         <h2>Хочешь поделиться со своим никому не нужным мнением?</h2>
         <h2>Тебе сюда! Переходи на страницу shit post`ов</h2>
         <div class="start__work__btn">
@@ -22,6 +23,18 @@ export default {
 </script>
 
 <style scoped>
+.close__btn {
+  position: absolute;
+  margin: 0px 0px 0px 368px;
+  font-size: 24px;
+  background: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background 0.5s ease;
+}
+.close__btn:hover {
+  background: #ab2e2e;
+}
 .start-work {
   display: flex;
   justify-content: center;
