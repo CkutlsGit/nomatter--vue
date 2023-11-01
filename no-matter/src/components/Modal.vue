@@ -5,13 +5,13 @@
       <button class="modal__btn--close" @click="closeModal">❌</button>
       <div class="dialog__inputs">
         <div class="dialog__block--input">
-          <input type="text" v-model.trim="nickname" @input="checkForm" placeholder="Nickname">
+          <input type="text" v-model.trim="nickname" @input="checkForm" placeholder="Nickname" maxlength="24">
         </div>
         <div class="dialog__block--input">
-          <input type="text" v-model.trim="title" @input="checkForm" placeholder="Title for post">
+          <input type="text" v-model.trim="title" @input="checkForm" placeholder="Title for post" maxlength="30">
         </div>
         <div class="dialog__block--input">
-          <input type="text" v-model.trim="description" @input="checkForm" placeholder="What are you want say?">
+          <textarea v-model.trim="description" @input="checkForm" placeholder="What are you want say?" maxlength="76"></textarea>
         </div>
       </div>
       <div class="dialog__btns">
@@ -65,7 +65,15 @@ export default {
   font-size: 34px;
   margin-bottom: 20px;
 }
-.dialog__inputs input {
+.dialog__inputs textarea {
+  width: 200px;
+  height: 70px;
+  word-break: break-word;
+  white-space: pre-wrap;
+}
+.dialog__inputs input,
+.dialog__inputs textarea
+{
   margin: 0 auto;
   display: flex;
   justify-content: center;
