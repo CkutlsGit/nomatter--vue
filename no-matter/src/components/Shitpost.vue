@@ -21,7 +21,7 @@
           >
             <div class="block">
               <div class="block__content">
-                <h1 class="block__name">{{ post.nickname }}</h1>
+                <h1 class="block__name"><span><img src="../../public/favicon-32x32.png" style="width: 15px; height: 15px; margin-right: 5px"></span>{{ post.nickname }}</h1>
                 <h1 class="block__title">{{ post.title }}</h1>
                 <p class="block__description">{{ post.description }}</p>
               </div>
@@ -71,6 +71,26 @@ export default {
 </script>
 
 <style scoped>
+.block__content {
+  background: #fff;
+  border-radius: 20px;
+  width: 400px;
+  height: 120px;
+  margin: 20px 20px;
+}
+.block__name {
+  font-size: 20px;
+  font-weight: 400;
+  margin: 5px 0 5px 15px;
+}
+.block__title {
+  font-size: 24px;
+  margin: 0 0 4px 10px;
+}
+.block__description {
+  font-size: 18px;
+  font-weight: 500;
+}
 .write__content button {
   margin: 40px 40px;
   padding: 5px 15px;
