@@ -1,8 +1,20 @@
 <template>
   <div class="mainpage">
     <header-element></header-element>
+    <h1
+        style="
+        font-size: 40px;
+        letter-spacing: 4px;
+        display: flex;
+        justify-content: center;
+        text-align: center
+        "
+        v-if="!openedWindow"
+    >
+      Не сегодня!
+    </h1>
     <section class="start-work">
-      <div class="start-work__content">
+      <div class="start-work__content" :class="openedWindow ? 'true' : 'hidden'">
         <button class="close__btn" @click="reloadPage">❌</button>
         <h2>Хочешь поделиться со своим никому не нужным мнением?</h2>
         <h2>Тебе сюда! Переходи на страницу shit post`ов</h2>
@@ -19,15 +31,26 @@ import headerElement from "@/pages/headerElement.vue";
 export default {
   name: 'MainPage',
   components: { headerElement },
+  data() {
+    return {
+      openedWindow: true
+    }
+  },
   methods: {
     reloadPage() {
-      location.reload()
+      this.openedWindow = false
+      setTimeout(() => {
+        location.reload()
+      }, 500)
     }
   }
 }
 </script>
 
 <style scoped>
+.hidden {
+  display: none;
+}
 .close__btn {
   position: absolute;
   margin: 0px 0px 0px 368px;
