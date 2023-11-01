@@ -60,6 +60,10 @@ export default {
         description: Array[2],
       }
       this.posts.push(post)
+
+      if (this.posts.length > 5) {
+        this.posts.shift()
+      }
       this.isOpen = false
     }
   }
