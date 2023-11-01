@@ -19,9 +19,13 @@
               v-for="(post, index) in posts"
               :key="index"
           >
-            <h1>От {{ post.nickname }}</h1>
-            <h1>Заголовок: {{ post.title }}</h1>
-            <h1>Его слова: {{ post.description }}</h1>
+            <div class="block">
+              <div class="block__content">
+                <h1 class="block__name">{{ post.nickname }}</h1>
+                <h1 class="block__title">{{ post.title }}</h1>
+                <p class="block__description">{{ post.description }}</p>
+              </div>
+            </div>
           </li>
         </ul>
       </div>
