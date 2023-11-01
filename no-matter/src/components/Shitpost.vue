@@ -46,9 +46,6 @@ export default {
       isOpen: false,
       id: 0,
       posts: [],
-      // nickname: '',
-      // title: '',
-      // description: ''
     }
   },
   methods: {
