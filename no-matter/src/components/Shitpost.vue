@@ -77,6 +77,8 @@ export default {
   width: 400px;
   height: 120px;
   margin: 20px 20px;
+  word-wrap: break-word;
+  white-space: pre-wrap;
 }
 .block__name {
   font-size: 20px;
