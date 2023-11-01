@@ -3,7 +3,7 @@
     <header-element></header-element>
     <section class="write">
       <div class="write__content">
-        <button @click="openModal">Написать</button>
+        <button @click="openModal">Write</button>
         <modal
             v-if="isOpen"
             @close="isOpen = false"

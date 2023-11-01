@@ -1,7 +1,7 @@
 <template>
   <div class="dialog">
     <div class="dialog__content">
-      <h1 class="dialog__content--title">Напишите пост</h1>
+      <h1 class="dialog__content--title">Write a post</h1>
       <button class="modal__btn--close" @click="closeModal">❌</button>
       <div class="dialog__inputs">
         <div class="dialog__block--input">
