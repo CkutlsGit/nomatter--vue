@@ -8,10 +8,10 @@
           <input type="text" v-model.trim="nickname" @input="checkForm" placeholder="Nickname" maxlength="24">
         </div>
         <div class="dialog__block--input">
-          <input type="text" v-model.trim="title" @input="checkForm" placeholder="Title for post" maxlength="30">
+          <input type="text" v-model.trim="title" @input="checkForm" placeholder="Title for post" maxlength="20">
         </div>
         <div class="dialog__block--input">
-          <textarea v-model.trim="description" @input="checkForm" placeholder="What are you want say?" maxlength="76"></textarea>
+          <textarea v-model.trim="description" @input="checkForm" placeholder="What are you want say?" maxlength="56"></textarea>
         </div>
       </div>
       <div class="dialog__btns">
@@ -68,8 +68,6 @@ export default {
 .dialog__inputs textarea {
   width: 200px;
   height: 70px;
-  word-break: break-word;
-  white-space: pre-wrap;
 }
 .dialog__inputs input,
 .dialog__inputs textarea
